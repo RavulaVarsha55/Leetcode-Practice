@@ -6,13 +6,11 @@ class Solution:
         for i in s:
             if i in vowelMap:
                 vowelMap[i]=vowelMap[i]+1;
-                if(maxV<vowelMap[i]): 
-                    maxV=vowelMap[i]
+                maxV=max(maxV,vowelMap[i])
             else:
                 if i in consMap:
                     consMap[i]=consMap[i]+1;
-                    if(maxC<consMap[i]): 
-                        maxC=consMap[i]
+                    maxC=max(maxC,consMap[i])
                 else:
                     consMap[i]=1;
                     maxC=max(maxC,consMap[i])
