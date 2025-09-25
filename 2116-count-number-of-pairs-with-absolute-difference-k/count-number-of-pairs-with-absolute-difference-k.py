@@ -4,6 +4,6 @@ class Solution:
         count=0
         count_nums=Counter(nums)
         for i in nums:
-            if (i-k) in nums:
+            if (i-k) or (i+k) in nums:
                 count=count+count_nums[i-k]
         return count
