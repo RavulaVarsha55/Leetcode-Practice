@@ -5,7 +5,6 @@ class Solution:
         left=0 #tracks rightv 
         for right in range(len(s)):
             if s[right] not in dict:#start from s[0] is this is not in dict means new so add 
-
                 dict.add(s[right])
                 maxlen=max(maxlen,len(dict))
                 print(maxlen)
