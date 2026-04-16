@@ -1,6 +1,13 @@
-from collections import Counter
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        c=Counter(nums)
-        return [i for i in c.keys() if c[i]<2][0]
+        res=0
+        for i in nums:
+            res=res^i
+        return res
+    # xor gives if two bits are same zero otherise false
+    # xor with same number gives zero
+    # xor with zero gives org num which is what we wan
+    # xor provides associative and commutatuive so felixibility of order
+    
+        
         
